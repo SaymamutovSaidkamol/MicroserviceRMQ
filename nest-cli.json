@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/MicroserviceRMQ/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/MicroserviceRMQ/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/MicroserviceRMQ",
+  "projects": {
+    "MicroserviceRMQ": {
+      "type": "application",
+      "root": "apps/MicroserviceRMQ",
+      "entryFile": "main",
+      "sourceRoot": "apps/MicroserviceRMQ/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/MicroserviceRMQ/tsconfig.app.json"
+      }
+    },
+    "book": {
+      "type": "application",
+      "root": "apps/book",
+      "entryFile": "main",
+      "sourceRoot": "apps/book/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/book/tsconfig.app.json"
+      }
+    }
+  }
+}
